@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wenzhiguo.recyclerview.ListViewActivity">
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <Button
+            android:text="全选"
+            android:id="@+id/checkAll"
+            android:layout_width="0dp"
+            android:onClick="CheckAll"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <Button
+            android:text="反选"
+            android:id="@+id/checkKnow"
+            android:layout_width="0dp"
+            android:onClick="CheckNnow"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView
+        android:text="价格："
+        android:textSize="30dp"
+        android:gravity="center"
+        android:id="@+id/tv_sum"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:layout_above="@id/tv_sum"
+        android:layout_below="@id/line1"
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+</RelativeLayout>
