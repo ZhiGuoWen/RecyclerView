@@ -81,7 +81,10 @@ public class WaterFallAdapter extends RecyclerView.Adapter<WaterFallHolder> {
     public int getItemCount() {
         return list.size();
     }
-    //控件移除交换位置
+    /*控件移除交换位置
+    onMove方法是拖拽的回调，参数viewHolder是拖动的Item，
+    target是拖动的目标位置的Item,该方法如果返回true表示切换了位置，反之返回false。
+     */
     public void onMove(int oldPosition, int newPosition) {
         //交换数据
         Collections.swap(list,oldPosition,newPosition);
@@ -90,7 +93,9 @@ public class WaterFallAdapter extends RecyclerView.Adapter<WaterFallHolder> {
     }
     //删除
     public void onDelete(int adapterPosition) {
+        //从集合里删除
         list.remove(adapterPosition);
+        //刷新适配器
         this.notifyItemRemoved(adapterPosition);
     }
 }

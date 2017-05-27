@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.text4:
                 //条目拖拽删除
+                //相关链接:http://mp.weixin.qq.com/s/IQWyT7vL4yAgpjIx4zd54A
                 setIntent(AnimationDeleteActivity.class);
                 break;
             case R.id.text5:

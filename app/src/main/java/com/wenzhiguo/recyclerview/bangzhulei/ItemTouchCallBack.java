@@ -11,8 +11,17 @@ import com.wenzhiguo.recyclerview.adapter.WaterFallAdapter;
  */
 
 public class ItemTouchCallBack extends ItemTouchHelper.Callback {
+    /*ItemTouchHelper.UP 滑动拖拽向上方向
+    ItemTouchHelper.DOWN 向下
+    ItemTouchHelper.LEFT 向左
+    ItemTouchHelper.RIGHT 向右
+    ItemTouchHelper.START 依赖布局方向的水平开始方向
+    ItemTouchHelper.END 依赖布局方向的水平结束方向*/
+
     private WaterFallAdapter waterFallAdapter;
-    //获取滑动的标记
+    /*该方法返回一个整数，用来指定拖拽和滑动在哪个方向是被允许的。
+    在其中使用makeMovementFlags(int dragFlags, int swipeFlags)返回，
+    该方法第一个参数用来指定拖动，第二个参数用来指定滑动。*/
     @Override
     public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
         //获取滑动的左右标记删除
@@ -36,7 +45,7 @@ public class ItemTouchCallBack extends ItemTouchHelper.Callback {
     public void setAdapter(WaterFallAdapter waterFallAdapter){
         this.waterFallAdapter = waterFallAdapter;
     }
-
+    //onSwiped方法为Item滑动回调，viewHolder为滑动的item，direction为滑动的方向。
     @Override
     public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
         //移除
