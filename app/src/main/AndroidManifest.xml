@@ -19,7 +19,8 @@
         <activity android:name=".WaterFallActivity" />
         <activity android:name=".BullActivity" />
         <activity android:name=".AnimationDeleteActivity" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity"/>
+        <activity android:name=".StickyHeaderActivity"/>
     </application>
 
 </manifest>

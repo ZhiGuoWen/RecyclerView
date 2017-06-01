@@ -25,12 +25,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView mBull = (TextView) findViewById(R.id.text3);
         TextView mDelete = (TextView) findViewById(R.id.text4);
         TextView mXlistView = (TextView) findViewById(R.id.text5);
+        TextView mPrecipice = (TextView) findViewById(R.id.text6);
         //监听事件
         mSeparate.setOnClickListener(this);
         mWaterfall.setOnClickListener(this);
         mBull.setOnClickListener(this);
         mDelete.setOnClickListener(this);
         mXlistView.setOnClickListener(this);
+        mPrecipice.setOnClickListener(this);
     }
 
     @Override
@@ -56,6 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.text5:
                 //购物车
                 setIntent(ListViewActivity.class);
+                break;
+            case R.id.text6:
+                //购物车
+                setIntent(StickyHeaderActivity.class);
                 break;
         }
     }
